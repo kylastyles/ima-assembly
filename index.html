@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2018 USCENTCOM AF IMA Assembly</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+        }
+
+        /* a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: white;
+        } */
+
+        .nav-bar {
+            background-color: #66b8d8;
+        }
+
+        .bg {
+            background-image: url('images/davis-conf-ctr.png');
+            background-repeat: no-repeat;
+            background-position: top, center;
+            height: 80%;
+        }
+
+        .transparent {
+            background-color: rgba(178, 178, 178, .5);
+        }
+
+        .rounded {
+            border-radius: 20px;
+        }
+
+        #buffer {
+            height: 10%;
+        }
+
+        #bangers {
+            font-family: 'Bangers', sans-serif;
+        }
+
+        .margin-10 {
+            margin: 10px;
+        }
+
+        .margin-20 {
+            margin: 20px;
+        }
+
+        .margin-top-10 {
+            margin-top: 10px;
+        }
+
+        .padding-20 {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="row" style="height:60px;">
+
+            <div class="col-xs-12 col-md-4">
+                <img src='images/af-wings-logo.png' class='smaller-img' align='left' height=50px alt="Air Force logo" />
+            </div>
+            <div class="col-xs-12 col-md-8">
+                <h1 id='bangers'>2018 USCENTCOM AF IMA ASSEMBLY</h1>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="col-xs-12 col-md-12">
+        <!-- BLANK ROW -->
+        <div class="row" id="buffer">
+            <div class="col-xs-12 col-md-12"></div>
+        </div>
+        <!-- BODY ROW -->
+        <div class="row" style="height:585px;">
+            <!-- NAV -->
+            <div class="col-md-3 nav-bar" id='bangers'>
+                <p id="welcome" class="margin-top-10">Join Us!</p>
+                <p id="register">Register Now!</p>
+                <p id="social">Break That Ice!</p>
+                <p id="speakers">Plugged In Speakers!</p>
+                <p id="agenda">What's Your Agenda?</p>
+                <p id="map">I'm Takin' A Map</p>
+                <p id="lodging">The MacDill Inn Crowd!</p>
+            </div>
+            
+            <div class='content col-xs-12 col-md-9 bg' style="height:100%;">
+                <div class="transparent margin-20 rounded" style="position:relative; top:50px;">
+                    <div class="padding-20">
+                        
+                        <!-- WELCOME -->
+                        <div id="section-1">
+                            <p>Welcome, family, to our 2018 USCENTCOM AF IMA Assembly site as graciously hosted by our very
+                                own CENTCOM Family Center! Please register now and GET READY for a high thrust, low drag
+                                experience tailor made to LEAD, MENTOR, DEVELOP and INFORM you into a more robust and engaging
+                                career as an invested Air Force IMA. So make registration your first priority, and then feel
+                                free to move about the cabin to explore our additional site pages. I look forward to seeing
+                                everyone in April!</p>
+
+                            <h3 class="margin-top-10">- CMSgt Mark J. Catledge</h3>
+                            <h4>USCENTCOM AF IMA SEA</h4>
+                        </div>
+
+                        <!-- REGISTER -->
+                        <div id="section-2">
+                                <p id='bangers'>Coming Soon!</p>
+
+                        </div>
+
+                        <!-- SOCIAL -->
+                        <div id="section-3">
+                                <p id='bangers'>Coming Soon!</p>
+
+                        </div>
+
+                        <!-- SPEAKERS -->
+                        <div id="section-4">
+                                <p id='bangers'>Coming Soon!</p>
+
+                        </div>
+
+                        <!-- AGENDA -->
+                        <div id="section-5">
+                                <p id='bangers'>Coming Soon!</p>
+
+                        </div>
+
+                        <!-- MAP -->
+                        <div id="section-6">
+                            <p id='bangers'>Coming Soon!</p>
+
+                        </div>
+
+                        <!-- LODGING -->
+                        <div id="section-7">
+                            <p>If you are not a local USCENTCOM AF IMA, please make your 
+                                on-base reservations individually by calling the MacDill Inn 
+                                directly at (813) 828-4259 at your earliest convenience.</p>
+                                                
+                            <p>PLEASE NOTE: You must mention Group Block #20650095016 
+                                as listed under &ldquo;2018 AFR CTA&rdquo; when securing accommodations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <img src='images/reserve-logo.png' class='img-responsive' align='right' height=50px alt="Air Force Reserve, Wings of Heritage, Shaping the Future"
+        />
+    </footer>
+    <script>
+        // Default hide everything but section-1
+        for (i = 2; i < 8; i++) {
+            $('#section-' + i).hide();
+        }
+
+        // On Clicks for showing respective sections
+        $('#welcome').on('click', function () {
+            divDisplayer('section-1');
+        });
+        $('#register').on('click', function () {
+            divDisplayer('section-2');
+        });
+        $('#social').on('click', function () {
+            divDisplayer('section-3');
+        });
+        $('#speakers').on('click', function () {
+            divDisplayer('section-4');
+        });
+        $('#agenda').on('click', function () {
+            divDisplayer('section-5');
+        });
+        $('#map').on('click', function () {
+            divDisplayer('section-6');
+        });
+        $('#lodging').on('click', function () {
+            divDisplayer('section-7');
+        });
+
+        // Function to hide all sections and then only show selected
+        function divDisplayer(section) {
+            for (i = 1; i < 8; i++) {
+                $('#section-' + i).hide();
+            }
+            $('#' + section).show();
+        }
+
+    </script>
+</body>
+
+</html>
